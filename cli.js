@@ -8,7 +8,7 @@ const updateNotifier = require('update-notifier')
 const index = require('./')
 const pkg = require('./package.json')
 
-const client = new AWS.Kinesis()
+const client = new AWS.Kinesis({ region: 'us-east-1' })
 
 program
   .version(pkg.version)
